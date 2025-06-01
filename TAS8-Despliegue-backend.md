@@ -83,7 +83,7 @@ Figura 8-2 Variables de entorno definidas.
 
 Figura 8-3 Dockerfile multi-stage.
 
-<img src="./back/c3PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/c3.PNG" alt="contenedor react docker" width="500"/>
 
 4. Configurar docker-compose.yml para los servicios backend, PostgreSQL y pgAdmin.
 
@@ -101,7 +101,7 @@ Figura 8-5 Backend corriendo y Flyway ejecutando migraciones.
 
 Figura 8-6 Conexión desde pgAdmin al servicio de PostgreSQL.
 
-<img src="./back/c5.PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/c6.PNG" alt="contenedor react docker" width="500"/>
 
 ## 9. Resultados esperados
 
