@@ -15,7 +15,7 @@ Un contenedor Docker tiene una vida limitada e interactúa con su entorno. Imagi
 
 Dockerfile es un archivo de texto totalmente normal. El Dockerfile contiene un conjunto de instrucciones, cada una en una línea distinta. Para crear una Docker Image, las instrucciones se ejecutan una tras otra. Quizás te suene este esquema de la ejecución de un script por lotes. Durante la ejecución, se añaden paso por paso más capas a la imagen.  Una imagen Docker se crea ejecutando las instrucciones de un Dockerfile. Este paso se conoce como el proceso build y empieza con la ejecución del comando “docker build”. El contexto de construcción es un concepto crucial: define a qué archivos y directorios tiene acceso el proceso de construcción, donde un directorio local hace las veces de fuente. El contenido del directorio fuente se transfiere al Docker Daemon al accionar “docker build”. Las instrucciones contenidas en el Dockerfile reciben acceso a los archivos y directorios contenidos en el contexto de construcción (¿Qué Es El Dockerfile? - IONOS, n.d.).
 
-<img src="./dockimage/dfile.jpeg" alt="contenedor react docker" width="500"/>
+<img src="./back/dfile.jpeg" alt="contenedor react docker" width="500"/>
 
 
 ### Multi-stage buils
@@ -27,7 +27,7 @@ Las compilaciones multietapa introducen varias etapas en tu Dockerfile, cada una
 Se recomiendan compilaciones de varias etapas para todo tipo de aplicaciones. Para lenguajes interpretados, como JavaScript, Ruby o Python, puedes compilar y minimizar tu código en una sola etapa y copiar los archivos listos para producción a una imagen de tiempo de ejecución más pequeña. Esto optimiza tu imagen para la implementación.
 Para lenguajes compilados, como C, Go o Rust, las compilaciones multietapa permiten compilar en una sola etapa y copiar los binarios compilados en una imagen de ejecución final. No es necesario incluir todo el compilador en la imagen final.(Compilaciones Multietapa | Documentación de Docker, n.d.)
 
-<img src="./dockimage/dfile.jpeg" alt="contenedor react docker" width="500"/>
+<img src="./back/multi.jpeg" alt="contenedor react docker" width="500"/>
 
 ## 4. Conocimientos previos
 
@@ -71,36 +71,37 @@ El estudiante debe conocer:
 
 Figura 8-1 Clonacion del repositorio backend.
 
-<img src="./dockimage/clonacion.PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/c1.PNG" alt="contenedor react docker" width="500"/>
 
 2. Crear archivo .env con las variables necesarias para la configuración.
 
 Figura 8-2 Variables de entorno definidas.
 
-<img src="./dockimage/levantamiento.PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/c2.PNG" alt="contenedor react docker" width="500"/>
 
 3.Crear el archivo Dockerfile con técnica de multi-stage build.
 
 Figura 8-3 Dockerfile multi-stage.
 
-<img src="./dockimage/file.PNG" alt="contenedor react docker" width="500"/>
-
+<img src="./back/c3PNG" alt="contenedor react docker" width="500"/>
 
 4. Configurar docker-compose.yml para los servicios backend, PostgreSQL y pgAdmin.
 
 Figura 8-4 Estructura de docker-compose.
 
-<img src="./dockimage/i3.PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/c4.PNG" alt="contenedor react docker" width="500"/>
 
 5. Levantar los servicios con docker-compose up --build -d y verificar su ejecución.
 
 Figura 8-5 Backend corriendo y Flyway ejecutando migraciones.
 
-<img src="./dockimage/container.PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/c5.PNG" alt="contenedor react docker" width="500"/>
 
 6. Acceder a pgAdmin y conectar con PostgreSQL correctamente.
 
 Figura 8-6 Conexión desde pgAdmin al servicio de PostgreSQL.
+
+<img src="./back/c5.PNG" alt="contenedor react docker" width="500"/>
 
 ## 9. Resultados esperados
 
@@ -111,7 +112,7 @@ Al finalizar la práctica, se cumplió exitosamente con todos los objetivos prop
 - La conexión a la base de datos desde pgAdmin, confirmando la persistencia y la comunicación en red entre los servicios.
 Todo el proceso fue acompañado de capturas que evidencian los pasos seguidos, desde la clonación del repositorio hasta la verificación de la aplicación corriendo dentro del contenedor.
 
- <img src="./dockimage/resultado.PNG" alt="contenedor react docker" width="500"/>
+<img src="./back/resultado.PNG" alt="contenedor react docker" width="500"/>
 
 
 ## 10. Bibliografía
